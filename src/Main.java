@@ -1,15 +1,17 @@
-
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args){
-        int[] random_values = {1,2,3,4};
-        for (int number = 0; number <= random_values.length;number++){
-            if (random_values[number] % 2 == 1){
-                System.out.println(String.format("%d is a odd number ", random_values[number] ));
-            } else {
-                System.out.println(random_values[number]);
-            }
-        }
+        ArrayList<Integer> random_values = new ArrayList<>();
+        random_values.add(1);
+        random_values.add(3);
+        random_values.add(7);
+        random_values.add(8);
+        random_values.forEach(number -> {
+            number = number * 2;
+            System.out.printf("%d ",number);
+        });
         }
     }
